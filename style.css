@@ -169,3 +169,43 @@ main {
   font-weight: 700;
   color: #c7365f;
 }
+
+@media screen and (min-width: 47rem) {
+  .btn-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 47rem) {
+  body {
+    height: initial;
+  }
+  main {
+    flex-direction: column;
+    width: 100%;
+    height: initial;
+  }
+  .btn-desktop {
+    display: none;
+  }
+  .btn--new {
+    right: 1rem;
+    left: initial;
+    transform: initial;
+  }
+  .btn--roll {
+    left: initial;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .btn--hold {
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .dice {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

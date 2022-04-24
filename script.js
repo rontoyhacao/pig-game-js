@@ -1,9 +1,9 @@
 'use strict';
 
 // selecting elements: buttons
-const btnNewGame = document.querySelector(`.btn--new`);
-const btnRollDice = document.querySelector(`.btn--roll`);
-const btnHold = document.querySelector(`.btn--hold`);
+const btnNewGame = document.querySelectorAll(`.btn--new`);
+const btnRollDice = document.querySelectorAll(`.btn--roll`);
+const btnHold = document.querySelectorAll(`.btn--hold`);
 
 // selecting elements: dice logo
 const diceLogo = document.querySelector(`.dice`);
@@ -100,6 +100,12 @@ const holdScore = () => {
   }
 };
 
-btnRollDice.addEventListener(`click`, rollDice);
-btnHold.addEventListener(`click`, holdScore);
-btnNewGame.addEventListener(`click`, init);
+btnRollDice.forEach(e => {
+  e.addEventListener(`click`, rollDice);
+});
+btnHold.forEach(e => {
+  e.addEventListener(`click`, holdScore);
+});
+btnNewGame.forEach(e => {
+  e.addEventListener(`click`, init);
+});
